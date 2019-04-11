@@ -14,8 +14,5 @@ public class GestionFechas {
     public void limitarFecha(JDateChooser entrada, JDateChooser salida){
         entrada.setMinSelectableDate(Date.valueOf(LocalDate.now())); 
         salida.setMinSelectableDate(Date.valueOf(LocalDate.now().plusDays(1)));
-        
     }
-    
-    
 }

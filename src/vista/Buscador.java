@@ -44,8 +44,6 @@ public class Buscador extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jLista = new javax.swing.JList<>();
         jLabelSeleccion = new javax.swing.JLabel();
-        fechaEntrada = new com.toedter.calendar.JDateChooser();
-        fechaSalida = new com.toedter.calendar.JDateChooser();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -57,6 +55,8 @@ public class Buscador extends javax.swing.JFrame {
         restaurante = new javax.swing.JRadioButton();
         bar = new javax.swing.JRadioButton();
         gimnasio = new javax.swing.JRadioButton();
+        fechaEntrada = new com.toedter.calendar.JDateChooser();
+        fechaSalida = new com.toedter.calendar.JDateChooser();
 
         jButton1.setText("jButton1");
 
@@ -92,8 +92,6 @@ public class Buscador extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 230, 530));
         getContentPane().add(jLabelSeleccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 680, 190, 60));
-        getContentPane().add(fechaEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, -1, -1));
-        getContentPane().add(fechaSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 90, -1, -1));
 
         jLabel2.setText("Entrada");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
@@ -127,6 +125,12 @@ public class Buscador extends javax.swing.JFrame {
 
         gimnasio.setText("Gimnasio");
         getContentPane().add(gimnasio, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 480, -1, -1));
+
+        fechaEntrada.setName("fechaEntrada"); // NOI18N
+        getContentPane().add(fechaEntrada, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, 150, -1));
+
+        fechaSalida.setName("fechaSalida"); // NOI18N
+        getContentPane().add(fechaSalida, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 140, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
