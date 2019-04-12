@@ -54,7 +54,6 @@ public class Login extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Verdana", 1, 15)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Inicie sesión");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, -1, -1));
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 160, 10));
@@ -69,7 +68,7 @@ public class Login extends javax.swing.JFrame {
                 dniKeyTyped(evt);
             }
         });
-        getContentPane().add(dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 110, -1));
+        getContentPane().add(dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 90, 180, 40));
 
         iniciarSesion.setFont(new java.awt.Font("Verdana", 1, 10)); // NOI18N
         iniciarSesion.setText("Iniciar sesión");
@@ -78,7 +77,7 @@ public class Login extends javax.swing.JFrame {
                 iniciarSesionActionPerformed(evt);
             }
         });
-        getContentPane().add(iniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 110, -1));
+        getContentPane().add(iniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 140, 40));
 
         registrarse.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         registrarse.setText("Registrarse");
@@ -87,41 +86,38 @@ public class Login extends javax.swing.JFrame {
                 registrarseActionPerformed(evt);
             }
         });
-        getContentPane().add(registrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 110, -1));
+        getContentPane().add(registrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 160, 60));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("DNI");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 40, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 140, 30));
 
         jLabel2.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Contraseña");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 200, 30));
 
         jLabel3.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("¿Aún no estás registrado?");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, -1, 20));
 
         contrasena.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 contrasenaActionPerformed(evt);
             }
         });
-        getContentPane().add(contrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 110, -1));
+        getContentPane().add(contrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 180, 40));
         getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 160, 10));
 
         invalido2.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
         invalido2.setForeground(new java.awt.Color(255, 0, 51));
         invalido2.setText("Inválido");
-        getContentPane().add(invalido2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, -1, -1));
+        getContentPane().add(invalido2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 190, -1, -1));
 
         invalido1.setFont(new java.awt.Font("Dialog", 1, 13)); // NOI18N
         invalido1.setForeground(new java.awt.Color(255, 0, 51));
         invalido1.setText("Inválido");
-        getContentPane().add(invalido1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, -1, -1));
+        getContentPane().add(invalido1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 90, -1, -1));
 
         jMenu1.setText("Ayuda");
 
@@ -181,7 +177,9 @@ public class Login extends javax.swing.JFrame {
 
     private void registrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarseActionPerformed
         //AQUI VOY A PROBAR LA CONEXION A DB
-
+        CrearUsuario miRegistro = new CrearUsuario();
+       miRegistro.setVisible(true);
+       dispose();
         /*Registro miRegistro = new Registro();
         miRegistro.setVisible(true);
         dispose();*/

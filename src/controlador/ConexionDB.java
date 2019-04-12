@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 public class ConexionDB {
     
     Connection conectar = null;
-    private String url="jdbc:mysql://localhost:81/reshotel";//aqui cambiamos el nombre
+    private String url="jdbc:mysql://localhost:3306/reshotel";//aqui cambiamos el nombre
     private String password="";
     private String userName="root";
     
